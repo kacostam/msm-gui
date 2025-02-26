@@ -74,7 +74,7 @@
 
     <td>
       <img src="<%= a_movie.image %>" style="width:250px;">
-    </td>
+    </td> 
 
     <td>
       <%= a_movie.title %>
@@ -89,7 +89,14 @@
       
       <% the_director = matching_directors.at(0) %>
 
-      <%= the_director.name %>
+       <% if the_director == nil %>
+      Uh, oh! We weren't able to find a director for this movie.
+      
+      <% else %>
+        <%= the_director.name %>
+      
+      <% end %>
+
     </td>
 
     <td>
