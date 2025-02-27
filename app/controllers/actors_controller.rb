@@ -43,7 +43,7 @@ class ActorsController < ApplicationController
   def update 
     a_id = params.fetch("an_actor_id")
 
-    matching_records = Actor.where({ :id => d_id})
+    matching_records = Actor.where({ :id => a_id})
     the_actor = matching_records.at(0)
 
     the_actor.name = params.fetch("the_name") 
